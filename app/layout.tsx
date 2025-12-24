@@ -10,7 +10,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Dieng Best Food - Masakan Indonesia Autentik",
   description:
-    "Rasakan kelezatan masakan lokal Dieng yang autentik. Kami menyediakan layanan makan di tempat, katering untuk acara spesial, dan rice box praktis dengan cita rasa tradisional Indonesia.",
+    "Rasakan kelezatan masakan lokal Dieng yang autentik. Kami menyediakan layanan makan di tempat, katering untuk acara spesial, dan nasi box praktis dengan cita rasa tradisional Indonesia.",
   generator: "v0.app",
   icons: {
     icon: [
