@@ -8,9 +8,9 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Dieng Best Food - Authentic Indonesian Cuisine",
+  title: "Dieng Best Food - Masakan Indonesia Autentik",
   description:
-    "Experience the best local Indonesian cuisine, catering services, and convenient rice boxes from Dieng Best Food",
+    "Rasakan kelezatan masakan lokal Dieng yang autentik. Kami menyediakan layanan makan di tempat, katering untuk acara spesial, dan rice box praktis dengan cita rasa tradisional Indonesia.",
   generator: "v0.app",
   icons: {
     icon: [
@@ -37,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="id">
       <body className={`font-sans antialiased`}>
         {children}
         <Analytics />

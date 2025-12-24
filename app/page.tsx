@@ -19,25 +19,25 @@ export default function DiengRestaurant() {
 
   const menuItems = [
     {
-      category: "Signature Dishes",
+      category: "Menu Unggulan",
       items: [
         {
           name: "Nasi Goreng Dieng",
-          desc: "Traditional fried rice with local spices and vegetables",
-          price: "Rp 35,000",
+          desc: "Nasi goreng tradisional dengan bumbu dan sayuran lokal",
+          price: "Rp 35.000",
         },
-        { name: "Sate Ayam Special", desc: "Grilled chicken skewers with peanut sauce", price: "Rp 40,000" },
-        { name: "Gado-Gado Dieng", desc: "Mixed vegetables with rich peanut dressing", price: "Rp 30,000" },
-        { name: "Rendang Sapi", desc: "Slow-cooked beef in coconut and spices", price: "Rp 55,000" },
+        { name: "Sate Ayam Special", desc: "Sate ayam bakar dengan bumbu kacang", price: "Rp 40.000" },
+        { name: "Gado-Gado Dieng", desc: "Sayuran campur dengan saus kacang yang kaya", price: "Rp 30.000" },
+        { name: "Rendang Sapi", desc: "Daging sapi masak lambat dengan santan dan rempah", price: "Rp 55.000" },
       ],
     },
     {
-      category: "Rice Box Specials",
+      category: "Paket Rice Box",
       items: [
-        { name: "Rice Box Ayam Bakar", desc: "Grilled chicken with sambal and vegetables", price: "Rp 25,000" },
-        { name: "Rice Box Ikan Goreng", desc: "Fried fish with traditional condiments", price: "Rp 28,000" },
-        { name: "Rice Box Vegetarian", desc: "Mixed vegetables and tofu tempeh", price: "Rp 22,000" },
-        { name: "Rice Box Beef Teriyaki", desc: "Tender beef with teriyaki glaze", price: "Rp 32,000" },
+        { name: "Rice Box Ayam Bakar", desc: "Ayam bakar dengan sambal dan sayuran", price: "Rp 25.000" },
+        { name: "Rice Box Ikan Goreng", desc: "Ikan goreng dengan lauk tradisional", price: "Rp 28.000" },
+        { name: "Rice Box Vegetarian", desc: "Sayuran campur dengan tahu tempe", price: "Rp 22.000" },
+        { name: "Rice Box Beef Teriyaki", desc: "Daging sapi empuk dengan saus teriyaki", price: "Rp 32.000" },
       ],
     },
   ]
@@ -58,13 +58,12 @@ export default function DiengRestaurant() {
               </h1>
             </div>
 
-            {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
               <a
                 href="#home"
                 className={`transition-colors hover:text-accent ${scrolled ? "text-foreground" : "text-primary-foreground drop-shadow-lg"}`}
               >
-                Home
+                Beranda
               </a>
               <a
                 href="#menu"
@@ -76,21 +75,21 @@ export default function DiengRestaurant() {
                 href="#services"
                 className={`transition-colors hover:text-accent ${scrolled ? "text-foreground" : "text-primary-foreground drop-shadow-lg"}`}
               >
-                Services
+                Layanan
               </a>
               <a
                 href="#about"
                 className={`transition-colors hover:text-accent ${scrolled ? "text-foreground" : "text-primary-foreground drop-shadow-lg"}`}
               >
-                About
+                Tentang
               </a>
               <a
                 href="#contact"
                 className={`transition-colors hover:text-accent ${scrolled ? "text-foreground" : "text-primary-foreground drop-shadow-lg"}`}
               >
-                Contact
+                Kontak
               </a>
-              <Button className="bg-accent hover:bg-accent/90 text-accent-foreground">Order Now</Button>
+              <Button className="bg-accent hover:bg-accent/90 text-accent-foreground">Pesan Sekarang</Button>
             </div>
 
             {/* Mobile menu button */}
@@ -104,7 +103,6 @@ export default function DiengRestaurant() {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden bg-background border-t border-border">
             <div className="px-4 pt-2 pb-4 space-y-2">
@@ -113,7 +111,7 @@ export default function DiengRestaurant() {
                 className="block py-2 text-foreground hover:text-accent"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Home
+                Beranda
               </a>
               <a
                 href="#menu"
@@ -127,29 +125,30 @@ export default function DiengRestaurant() {
                 className="block py-2 text-foreground hover:text-accent"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Services
+                Layanan
               </a>
               <a
                 href="#about"
                 className="block py-2 text-foreground hover:text-accent"
                 onClick={() => setIsMenuOpen(false)}
               >
-                About
+                Tentang
               </a>
               <a
                 href="#contact"
                 className="block py-2 text-foreground hover:text-accent"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Contact
+                Kontak
               </a>
-              <Button className="w-full mt-2 bg-accent hover:bg-accent/90 text-accent-foreground">Order Now</Button>
+              <Button className="w-full mt-2 bg-accent hover:bg-accent/90 text-accent-foreground">
+                Pesan Sekarang
+              </Button>
             </div>
           </div>
         )}
       </nav>
 
-      {/* Hero Section */}
       <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 parallax-bg"
@@ -162,14 +161,14 @@ export default function DiengRestaurant() {
 
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <h2 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 drop-shadow-2xl text-balance">
-            Authentic Indonesian Flavors from the Heart of Dieng
+            Cita Rasa Indonesia Autentik dari Hati Dieng
           </h2>
           <p className="text-xl md:text-2xl text-primary-foreground/95 mb-8 drop-shadow-lg text-pretty">
-            Experience the best local cuisine, catering services, and convenient rice boxes
+            Rasakan masakan lokal terbaik, layanan katering, dan rice box yang praktis
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8">
-              View Our Menu
+              Lihat Menu Kami
               <ChevronRight className="ml-2 h-5 w-5" />
             </Button>
             <Button
@@ -177,7 +176,7 @@ export default function DiengRestaurant() {
               variant="outline"
               className="bg-primary-foreground/90 hover:bg-primary-foreground text-primary text-lg px-8 border-0"
             >
-              Order Catering
+              Pesan Katering
             </Button>
           </div>
         </div>
@@ -187,12 +186,13 @@ export default function DiengRestaurant() {
         </div>
       </section>
 
-      {/* Services Overview */}
       <section id="services" className="py-20 px-4 bg-background">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4 text-balance">Our Services</h2>
-            <p className="text-xl text-muted-foreground text-pretty">Bringing authentic flavors to every occasion</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4 text-balance">Layanan Kami</h2>
+            <p className="text-xl text-muted-foreground text-pretty">
+              Menghadirkan cita rasa autentik untuk setiap acara
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -213,9 +213,9 @@ export default function DiengRestaurant() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-3">Dine In</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-3">Makan di Tempat</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Enjoy our cozy atmosphere and authentic Indonesian cuisine in our beautifully designed dining space
+                  Nikmati suasana nyaman dan masakan Indonesia autentik di ruang makan kami yang dirancang dengan indah
                 </p>
               </CardContent>
             </Card>
@@ -232,9 +232,10 @@ export default function DiengRestaurant() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-3">Catering Services</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-3">Layanan Katering</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Professional catering for weddings, corporate events, and special occasions with customizable menus
+                  Katering profesional untuk pernikahan, acara perusahaan, dan acara spesial dengan menu yang dapat
+                  disesuaikan
                 </p>
               </CardContent>
             </Card>
@@ -258,7 +259,7 @@ export default function DiengRestaurant() {
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-3">Rice Box</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Convenient and delicious rice box meals perfect for lunch, meetings, or quick dining on the go
+                  Paket nasi praktis dan lezat yang sempurna untuk makan siang, rapat, atau makan cepat saat bepergian
                 </p>
               </CardContent>
             </Card>
@@ -266,13 +267,12 @@ export default function DiengRestaurant() {
         </div>
       </section>
 
-      {/* Featured Menu */}
       <section id="menu" className="py-20 px-4 bg-muted/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4 text-balance">Our Menu</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4 text-balance">Menu Kami</h2>
             <p className="text-xl text-muted-foreground text-pretty">
-              Carefully crafted dishes using traditional recipes and fresh ingredients
+              Hidangan yang dibuat dengan hati-hati menggunakan resep tradisional dan bahan-bahan segar
             </p>
           </div>
 
@@ -299,25 +299,25 @@ export default function DiengRestaurant() {
 
           <div className="text-center mt-12">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-              Download Full Menu
+              Unduh Menu Lengkap
             </Button>
           </div>
         </div>
       </section>
 
-      {/* About Section */}
       <section id="about" className="py-20 px-4 bg-background">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6 text-balance">About Dieng Best Food</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6 text-balance">Tentang Dieng Best Food</h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                Founded in the heart of Dieng, we've been serving authentic Indonesian cuisine for over a decade. Our
-                passion is bringing traditional flavors to modern dining experiences.
+                Didirikan di jantung Dieng, kami telah menyajikan masakan Indonesia autentik selama lebih dari satu
+                dekade. Gairah kami adalah membawa cita rasa tradisional ke pengalaman bersantap modern.
               </p>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                Every dish is prepared with love, using recipes passed down through generations and the freshest local
-                ingredients. From our family to yours, we invite you to taste the difference.
+                Setiap hidangan disiapkan dengan penuh cinta, menggunakan resep yang diwariskan turun-temurun dan
+                bahan-bahan lokal yang paling segar. Dari keluarga kami untuk Anda, kami mengundang Anda untuk merasakan
+                perbedaannya.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
@@ -331,7 +331,7 @@ export default function DiengRestaurant() {
                       />
                     </svg>
                   </div>
-                  <span className="text-foreground font-medium">Authentic Traditional Recipes</span>
+                  <span className="text-foreground font-medium">Resep Tradisional Autentik</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0">
@@ -343,7 +343,7 @@ export default function DiengRestaurant() {
                       />
                     </svg>
                   </div>
-                  <span className="text-foreground font-medium">Fresh Local Ingredients</span>
+                  <span className="text-foreground font-medium">Bahan Lokal yang Segar</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0">
@@ -351,14 +351,14 @@ export default function DiengRestaurant() {
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                     </svg>
                   </div>
-                  <span className="text-foreground font-medium">Award-Winning Service</span>
+                  <span className="text-foreground font-medium">Pelayanan Pemenang Penghargaan</span>
                 </div>
               </div>
             </div>
             <div className="relative h-96 md:h-full min-h-[400px] rounded-lg overflow-hidden shadow-2xl">
               <img
                 src="/indonesian-chef-cooking-traditional-food-kitchen.jpg"
-                alt="Our Kitchen"
+                alt="Dapur Kami"
                 className="absolute inset-0 w-full h-full object-cover"
               />
             </div>
@@ -366,13 +366,12 @@ export default function DiengRestaurant() {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section id="contact" className="py-20 px-4 bg-primary text-primary-foreground">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance">Get In Touch</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance">Hubungi Kami</h2>
             <p className="text-xl text-primary-foreground/90 text-pretty">
-              We'd love to hear from you and serve you soon
+              Kami ingin mendengar dari Anda dan melayani Anda segera
             </p>
           </div>
 
@@ -383,11 +382,11 @@ export default function DiengRestaurant() {
                   <MapPin className="w-6 h-6 text-accent-foreground" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Visit Us</h3>
+                  <h3 className="text-xl font-bold mb-2">Kunjungi Kami</h3>
                   <p className="text-primary-foreground/90 leading-relaxed">
                     Jalan Dieng Raya No. 123
                     <br />
-                    Dieng, Central Java, Indonesia
+                    Dieng, Jawa Tengah, Indonesia
                   </p>
                 </div>
               </div>
@@ -397,7 +396,7 @@ export default function DiengRestaurant() {
                   <Phone className="w-6 h-6 text-accent-foreground" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Call Us</h3>
+                  <h3 className="text-xl font-bold mb-2">Hubungi Kami</h3>
                   <p className="text-primary-foreground/90 leading-relaxed">
                     +62 812-3456-7890
                     <br />
@@ -411,7 +410,7 @@ export default function DiengRestaurant() {
                   <Mail className="w-6 h-6 text-accent-foreground" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Email Us</h3>
+                  <h3 className="text-xl font-bold mb-2">Email Kami</h3>
                   <p className="text-primary-foreground/90 leading-relaxed">
                     info@diengbestfood.com
                     <br />
@@ -425,54 +424,54 @@ export default function DiengRestaurant() {
                   <Clock className="w-6 h-6 text-accent-foreground" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Opening Hours</h3>
+                  <h3 className="text-xl font-bold mb-2">Jam Buka</h3>
                   <p className="text-primary-foreground/90 leading-relaxed">
-                    Monday - Sunday
+                    Senin - Jumat: 10:00 - 22:00
                     <br />
-                    10:00 AM - 10:00 PM
+                    Sabtu - Minggu: 09:00 - 23:00
                   </p>
                 </div>
               </div>
             </div>
 
-            <Card className="bg-background/95 border-0">
+            <Card className="bg-primary-foreground/10 border-primary-foreground/20">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-primary mb-6">Send us a message</h3>
+                <h3 className="text-2xl font-bold mb-6">Kirim Pesan</h3>
                 <form className="space-y-4">
                   <div>
                     <input
                       type="text"
-                      placeholder="Your Name"
-                      className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                      placeholder="Nama Anda"
+                      className="w-full px-4 py-3 rounded-lg bg-primary-foreground/90 text-primary placeholder:text-primary/60 focus:outline-none focus:ring-2 focus:ring-accent"
                     />
                   </div>
                   <div>
                     <input
                       type="email"
-                      placeholder="Your Email"
-                      className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                      placeholder="Email Anda"
+                      className="w-full px-4 py-3 rounded-lg bg-primary-foreground/90 text-primary placeholder:text-primary/60 focus:outline-none focus:ring-2 focus:ring-accent"
                     />
                   </div>
                   <div>
                     <input
                       type="tel"
-                      placeholder="Phone Number"
-                      className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                      placeholder="Nomor Telepon"
+                      className="w-full px-4 py-3 rounded-lg bg-primary-foreground/90 text-primary placeholder:text-primary/60 focus:outline-none focus:ring-2 focus:ring-accent"
                     />
                   </div>
                   <div>
                     <textarea
-                      placeholder="Your Message"
+                      placeholder="Pesan Anda"
                       rows={4}
-                      className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary resize-none"
-                    ></textarea>
+                      className="w-full px-4 py-3 rounded-lg bg-primary-foreground/90 text-primary placeholder:text-primary/60 focus:outline-none focus:ring-2 focus:ring-accent resize-none"
+                    />
                   </div>
                   <Button
                     type="submit"
                     size="lg"
                     className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
                   >
-                    Send Message
+                    Kirim Pesan
                   </Button>
                 </form>
               </CardContent>
@@ -481,82 +480,81 @@ export default function DiengRestaurant() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-primary/95 text-primary-foreground py-12 px-4">
+      <footer className="bg-background border-t border-border py-12 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h3 className="text-2xl font-bold mb-4">Dieng Best Food</h3>
-              <p className="text-primary-foreground/80 leading-relaxed">
-                Authentic Indonesian cuisine served with passion and tradition since 2010.
+              <h3 className="text-xl font-bold text-primary mb-4">Dieng Best Food</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Menyajikan cita rasa Indonesia autentik dengan cinta dan dedikasi sejak 2010.
               </p>
             </div>
             <div>
-              <h4 className="text-lg font-bold mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-primary-foreground/80">
+              <h4 className="text-lg font-bold text-foreground mb-4">Tautan Cepat</h4>
+              <ul className="space-y-2">
                 <li>
-                  <a href="#home" className="hover:text-accent transition-colors">
-                    Home
+                  <a href="#home" className="text-muted-foreground hover:text-accent transition-colors">
+                    Beranda
                   </a>
                 </li>
                 <li>
-                  <a href="#menu" className="hover:text-accent transition-colors">
+                  <a href="#menu" className="text-muted-foreground hover:text-accent transition-colors">
                     Menu
                   </a>
                 </li>
                 <li>
-                  <a href="#services" className="hover:text-accent transition-colors">
-                    Services
+                  <a href="#services" className="text-muted-foreground hover:text-accent transition-colors">
+                    Layanan
                   </a>
                 </li>
                 <li>
-                  <a href="#about" className="hover:text-accent transition-colors">
-                    About
+                  <a href="#about" className="text-muted-foreground hover:text-accent transition-colors">
+                    Tentang
                   </a>
                 </li>
               </ul>
             </div>
             <div>
-              <h4 className="text-lg font-bold mb-4">Services</h4>
-              <ul className="space-y-2 text-primary-foreground/80">
-                <li>Dine In</li>
-                <li>Catering</li>
-                <li>Rice Box</li>
-                <li>Delivery</li>
+              <h4 className="text-lg font-bold text-foreground mb-4">Layanan</h4>
+              <ul className="space-y-2">
+                <li className="text-muted-foreground">Makan di Tempat</li>
+                <li className="text-muted-foreground">Katering</li>
+                <li className="text-muted-foreground">Rice Box</li>
+                <li className="text-muted-foreground">Pemesanan Online</li>
               </ul>
             </div>
             <div>
-              <h4 className="text-lg font-bold mb-4">Follow Us</h4>
+              <h4 className="text-lg font-bold text-foreground mb-4">Ikuti Kami</h4>
               <div className="flex gap-4">
                 <a
                   href="#"
-                  className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center hover:bg-accent/80 transition-colors"
+                  className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center hover:bg-accent transition-colors"
                 >
-                  <svg className="w-5 h-5 text-accent-foreground" fill="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-primary-foreground" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                   </svg>
                 </a>
                 <a
                   href="#"
-                  className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center hover:bg-accent/80 transition-colors"
+                  className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center hover:bg-accent transition-colors"
                 >
-                  <svg className="w-5 h-5 text-accent-foreground" fill="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-primary-foreground" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                   </svg>
                 </a>
                 <a
                   href="#"
-                  className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center hover:bg-accent/80 transition-colors"
+                  className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center hover:bg-accent transition-colors"
                 >
-                  <svg className="w-5 h-5 text-accent-foreground" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                  <svg className="w-5 h-5 text-primary-foreground" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
                   </svg>
                 </a>
               </div>
             </div>
           </div>
-          <div className="border-t border-primary-foreground/20 pt-8 text-center text-primary-foreground/80">
-            <p>&copy; 2025 Dieng Best Food. All rights reserved.</p>
+          <div className="border-t border-border pt-8 text-center text-muted-foreground">
+            <p>&copy; 2025 Dieng Best Food. Hak Cipta Dilindungi.</p>
           </div>
         </div>
       </footer>
