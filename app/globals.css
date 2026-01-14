@@ -133,3 +133,12 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+/* Add mobile-specific background styles to prevent cropping */
+@media (max-width: 768px) {
+  .parallax-bg {
+    background-attachment: scroll;
+    background-size: contain;
+    background-position: center;
+  }
+}
